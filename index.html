@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      background-color: hsl(0, 0%, 98%);
+      font-family: sans-serif, Epilogue;
+    }
+    a{
+      color: hsl(0, 0%, 41%);
+      text-decoration-line: none;
+    }
+    a:hover{
+      color: hsl(0, 0%, 8%);
+    }
+    #body{
+      padding: 1rem 1.5rem;
+    }
+    .arr{
+      height: 15px;
+      padding: 1rem .7rem;
+    }
+    .box{
+      border: 1px  solid #000;
+      padding: 1rem;
+      border-radius: 20px;
+    }
+    .lbox{
+      background-color: #000;
+      color: #fff;
+    }
+    .box:hover{
+      border: 2px solid #000;
+      background-color: #fff;
+      color: #000;
+    }
+    .arcon{
+      margin-left: 1rem;
+    }
+    .nav2{
+      position: absolute;
+      right: 2rem;
+    }
+    .nav11{
+      margin: 0 1rem;
+    }
+    .nav22{
+      margin: 0 1rem;
+    }
+    .reg{
+      position: relative;
+      bottom: 1rem;
+    }
+    .hidden{
+      display: none;
+    }
+    .F{
+      background-color: #fff;
+      border-radius: 20px;
+      position: absolute;
+      top:8%;
+      left: 5%;
+      width: 150px;
+    }
+    .C{
+      background-color: #fff;
+      border-radius: 20px;
+      position: absolute;
+      top: 8%;
+      left: 18%;
+      width: 100px;
+    }
+    .flex{
+      display: flex;
+    }
+    .reg{
+      margin-top: 1rem;
+    }
+    .work{
+      margin-top: 10rem;
+      line-height: 2;
+      padding: 4rem;
+    }
+    .png{
+      width: 400px;
+      margin-top: 2rem;
+    }
+    .png2{
+      display: none;
+    }
+    .menu{
+      display: none;
+    }
+    .client{
+      margin-right: 3rem;
+    }
+    .cross{
+      display: none;
+    }
+    .attribution { margin-bottom: 0; padding-bottom: 0; font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @media (max-width: 500px) {
+      body{
+        text-align: center;
+      }
+      .logo{
+        position: relative;
+        right: 10rem;
+      }
+      .menu{
+        display: block;
+        position: absolute;
+        right: 3rem;
+        top: 1.6rem;
+      }
+      .flex{
+        display: block;
+      }
+      .cross{
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+      }
+
+      .n1, .n2{
+        display: none;
+        background-color: #fff;
+        position: absolute;
+        width: 20rem;
+        height: 28rem;
+        right: 0;
+
+      }
+      .n1{
+        top: 0;
+      }
+      .n2{
+        top: 28rem;
+        
+      }
+      .F,
+      .C{
+        position: static;
+        margin-left: 7rem;
+      }
+      .F .flex,
+      .C .flex{
+        display: flex;
+      }
+      .nav11, 
+      .nav22{
+        display: block;
+        position: static;
+        margin-top: 2rem;
+      }
+      .png{
+        display: none;
+      }
+      .png3{
+        display: flex;
+        margin: 1rem;
+      }
+      .client{
+        margin: .2rem;
+        position: relative;
+        right: 6rem;
+      }
+      .png2{
+        margin-top: 1rem;
+        margin-bottom: 0;
+        display: block;
+        width: 380px;
+      }
+      .work{
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main id="body">
+    <div class="nav flex">
+      <img class="logo" src="images/logo.svg" alt="logo">
+      <a class="mclick" href="#"><img class="menu" src="images/icon-menu.svg" alt="menu"></a>
+    <div class="nav1 flex n1">
+      <a class="cross" href="#">X</a>
+      <a class="nav11 features" href="#">Features<img class="ar1 ar" src="images/icon-arrow-down.svg" alt="arrow-down"></a>
+      <div class = "F hidden">
+        <div class="flex">
+          <img class="arr" src="images/icon-todo.svg" alt="icon-todo">
+          <p class="arcon">Todo List</p>
+        </div>
+        <div class="flex">
+          <img class="arr" src="images/icon-calendar.svg" alt="icon-calendar">
+          <p class="arcon">Calender</p>
+        </div>
+        <div class="flex">
+          <img class="arr" src="images/icon-reminders.svg" alt="icon-reminders">
+          <p class="arcon">Remainders</p>
+        </div>
+        <div class="flex">
+          <img class="arr" src="images/icon-planning.svg" alt="icon-planning">
+          <p class="arcon">Planning</p>
+        </div>
+      </div>
+      <a class="nav11 company" href="#">Company<img class="ar1 ar" src="images/icon-arrow-down.svg" alt="arrow-down"></a>
+      <div class="C hidden">
+        <p class="arcon">History</p>
+        <p class="arcon">Our Team</p>
+        <p class="arcon">Blog</p>
+      </div>
+      <a class="nav11" href="#">Careers</a>
+      <a class="nav11" href="#">About</a>
+    </div>
+    
+    <div class="nav2 flex n2">
+      <a class="nav22" href="#">Login</a>
+      <a class="nav22 box reg" href="#">Register</a>
+    </div>
+  </div>
+  <div class="flex">
+    <div>
+      <img class="png2" src="images/image-hero-mobile.png" alt="mobile-png">
+    </div>
+
+  <div class="work">
+  <h1>Make remote work</h1>
+
+  <p>Get your team in sync, no matter your location. Streamline processes, 
+  create team rituals, and watch productivity soar.
+</p>
+  <a class="box lbox" href="#">Learn more</a>
+  <br>
+  <div class="flex png png3">
+    <img class="client" src="images/client-databiz.svg" alt="client-databiz">
+    <img class="client" src="images/client-audiophile.svg" alt="client-audiophile">
+    <img class="client" src="images/client-meet.svg" alt="client-meet">
+    <img class="client" src="images/client-maker.svg" alt="client-maker">
+  </div>
+</div>
+<div>
+  <img class="png" src="images/image-hero-desktop.png" alt="destop-png">
+</div>
+</div>
+</main>
+<script>
+  document.querySelector(".features").addEventListener("click", function(){
+    document.querySelector(".F").classList.toggle("hidden");
+  });
+  document.querySelector(".company").addEventListener("click", function(){
+    document.querySelector(".C").classList.toggle("hidden");
+  });
+  document.querySelector(".mclick").addEventListener("click", function(){
+    document.querySelector(".n1").style.display = "block";
+    document.querySelector(".n2").style.display = "block";
+  });
+  document.querySelector(".cross").addEventListener("click", function(){
+    document.querySelector(".n1").style.display = "none";
+    document.querySelector(".n2").style.display = "none";
+    
+  });
+</script>
+<div class="attribution">
+  <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+  Coded by <a href="#">Abhishek Bansal</a>.</p>
+</div>
+
+</body>
+</html>
